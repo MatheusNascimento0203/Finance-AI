@@ -79,17 +79,29 @@ const TransactionPierChart = ({
             <PercentageItem
               icon={<TrendingUpIcon size={16} className="text-primary" />}
               title="Receita"
-              value={typesPercentage[TransactionType.DEPOSIT]}
+              value={
+                !isNaN(typesPercentage[TransactionType.DEPOSIT])
+                  ? typesPercentage[TransactionType.DEPOSIT]
+                  : 0
+              }
             />
             <PercentageItem
               icon={<TrendingDownIcon size={16} className="text-danger" />}
               title="Despesas"
-              value={typesPercentage[TransactionType.EXPENSE]}
+              value={
+                !isNaN(typesPercentage[TransactionType.EXPENSE])
+                  ? typesPercentage[TransactionType.EXPENSE]
+                  : 0
+              }
             />
             <PercentageItem
               icon={<PiggyBankIcon size={16} />}
               title="Investido"
-              value={typesPercentage[TransactionType.INVESTMENT]}
+              value={
+                !isNaN(typesPercentage[TransactionType.INVESTMENT])
+                  ? typesPercentage[TransactionType.INVESTMENT]
+                  : 0
+              }
             />
           </div>
         </CardContent>
