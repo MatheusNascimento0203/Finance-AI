@@ -4,6 +4,16 @@ import { LogInIcon } from "lucide-react";
 import { SignInButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Finance-AI",
+  description: "Finance-Ai - Login",
+  icons: {
+    icon: "/finance-AI-icon.svg",
+    apple: "/finance-AI-icon.svg",
+  },
+};
 
 const LoginPage = async () => {
   const { userId } = await auth();
