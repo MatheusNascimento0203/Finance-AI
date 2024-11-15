@@ -6,6 +6,16 @@ import Navbar from "../_components/navbar";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { ScrollArea } from "../_components/ui/scroll-area";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Transações",
+  description: "Tela de Transações",
+  icons: {
+    icon: "/finance-AI-icon.svg",
+    apple: "/finance-AI-icon.svg",
+  },
+};
 
 const TransactionsPage = async () => {
   const { userId } = await auth();

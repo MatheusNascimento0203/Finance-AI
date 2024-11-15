@@ -8,6 +8,16 @@ import TransactionPierChart from "./_components/transactions-pie-chart";
 import { getDashboard } from "../data/get-dashboard";
 import ExpensesPerCategory from "./_components/expenses-per-category";
 import LastTransactions from "./_components/last-transactions";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home - Dashboard",
+  description: "Bem-vindo ao Dashboard da Finance AI",
+  icons: {
+    icon: "/finance-AI-icon.svg",
+    apple: "/finance-AI-icon.svg",
+  },
+};
 
 interface HomeProps {
   searchParams: { month: string };
