@@ -33,7 +33,7 @@ import {
   TRANSACTION_TYPE_OPTIONS,
 } from "../_constants/transactions";
 import { DatePicker } from "./ui/date-picker";
-import {} from "react";
+import { useEffect } from "react";
 import { z } from "zod";
 import {
   TransactionCategory,
@@ -95,6 +95,12 @@ const UpsertTransactionDialog = ({
       type: TransactionType.EXPENSE,
     },
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      form.reset(defaultValues);
+    }
+  }, [isOpen, defaultValues, form]);
 
   const onSubmit = async (data: FormSchema) => {
     try {

@@ -6,7 +6,7 @@ interface TransactionTypeBadgeProps {
   transaction: Transaction;
 }
 
-const TransactionTypebadge = ({ transaction }: TransactionTypeBadgeProps) => {
+const TransactionTypeBadge = ({ transaction }: TransactionTypeBadgeProps) => {
   if (transaction.type === TransactionType.DEPOSIT) {
     return (
       <Badge className="bg-muted text-primary hover:bg-muted">
@@ -31,4 +31,4 @@ const TransactionTypebadge = ({ transaction }: TransactionTypeBadgeProps) => {
   );
 };
 
-export default TransactionTypebadge;
+export default TransactionTypeBadge;

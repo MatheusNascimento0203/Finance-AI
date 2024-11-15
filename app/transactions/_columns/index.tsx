@@ -2,7 +2,7 @@
 
 import { Transaction } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
-import TransactionTypebadge from "../_components/type-badge";
+import TransactionTypeBadge from "../_components/type-badge";
 import {
   TRANSACTION_CATEGORY_LABELS,
   TRANSACTION_PAYMENT_METHOD_LABELS,
@@ -19,7 +19,7 @@ export const transactionsColumns: ColumnDef<Transaction>[] = [
     accessorKey: "type",
     header: "Tipo",
     cell: ({ row: { original: transaction } }) => (
-      <TransactionTypebadge transaction={transaction} />
+      <TransactionTypeBadge transaction={transaction} />
     ),
   },
 

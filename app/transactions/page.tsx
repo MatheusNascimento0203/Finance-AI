@@ -18,7 +18,11 @@ const TransactionsPage = async () => {
     where: {
       userId,
     },
+    orderBy: {
+      date: "desc",
+    },
   });
+
   return (
     <>
       <Navbar />
